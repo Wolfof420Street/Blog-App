@@ -1,8 +1,10 @@
-package com.wolf.blogapp;
+package com.wolf.blogapp.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.wolf.blogapp.R;
 
 public class PostListActivity extends AppCompatActivity {
 
