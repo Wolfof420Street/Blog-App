@@ -13,7 +13,7 @@
         <ImageView
         android:id="@+id/postImageView"
         android:adjustViewBounds="true"
-        android:src="@color/cardview_dark_background"
+        android:src="@mipmap/add_btn"
         android:scaleType="centerCrop"
         android:cropToPadding="false"
         android:layout_width="match_parent"

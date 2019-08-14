@@ -2,4 +2,7 @@
     <string name="app_name">Blog App</string>
     <string name="loginTitle">Login</string>
     <string name="signUp">Create Account</string>
+    <string name="post_title">Post Title...</string>
+    <string name="post_description">Post Description</string>
+    <string name="post_button">Post</string>
 </resources>
