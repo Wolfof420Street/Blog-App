@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
                 if (mUser != null) {
                     Toast.makeText(MainActivity.this, "signed in", Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(MainActivity.this, PostListActivity.class));
                 } else {
                     Toast.makeText(MainActivity.this, "Not signed in", Toast.LENGTH_LONG).show();
                 }
@@ -71,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void login(String email, String password) {
-        firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+        firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this,  new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
@@ -80,9 +81,9 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(new Intent(MainActivity.this, PostListActivity.class));
                     /*updateUI(user);*/
                 } else {
-                    /*Toast.makeText(EmailPasswordActivity.this, "Authentication failed.",
+                    Toast.makeText(MainActivity.this, "Authentication failed.",
                             Toast.LENGTH_SHORT).show();
-                    updateUI(null);*/
+                   // updateUI(null);
                 }
             }
         });

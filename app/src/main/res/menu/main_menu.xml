@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item android:id="@+id/action_add"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/outline_add_black_18dp"
         android:title="Add Post"
         app:showAsAction="always"/>
 
