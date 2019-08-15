@@ -38,7 +38,6 @@ public class BlogRecyclerAdapter extends RecyclerView.Adapter<BlogRecyclerAdapte
     public void onBindViewHolder(@NonNull BlogRecyclerAdapter.ViewHolder holder, int position) {
 
         Blog blog = blogList.get(position);
-        String imageUrl = null;
 
         holder.title.setText(blog.getTitle());
         holder.desc.setText(blog.getDesc());
@@ -49,7 +48,7 @@ public class BlogRecyclerAdapter extends RecyclerView.Adapter<BlogRecyclerAdapte
 
         holder.timeStamp.setText(formattedDate);
 
-        imageUrl = blog.getImage();
+        String imageUrl = blog.getImage();
 
         Picasso.get()
                 .load(imageUrl)

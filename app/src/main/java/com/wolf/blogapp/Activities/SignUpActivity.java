@@ -103,7 +103,7 @@ public class SignUpActivity extends AppCompatActivity {
                     String userId = mAuth.getCurrentUser().getUid();
                     DatabaseReference currentUserDb= mDatabaseReference.child(userId);
                     currentUserDb.child("firstName").setValue(firstName);
-                    currentUserDb.child("lastName").setValue(secondName);
+                    currentUserDb.child("secondName").setValue(secondName);
                     currentUserDb.child("images").setValue(resultUri.toString());
 
                     progressDialog.dismiss();

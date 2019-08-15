@@ -51,7 +51,7 @@ public class PostListActivity extends AppCompatActivity {
         mUser = mAuth.getCurrentUser();
         mDataBase = FirebaseDatabase.getInstance();
         mDatabaseRefrence = mDataBase.getReference().child("Blog");
-        mDataBase.setPersistenceEnabled(true);
+        mDatabaseRefrence.keepSynced(true);
     }
 
     @Override
@@ -73,7 +73,7 @@ public class PostListActivity extends AppCompatActivity {
             case R.id.action_signout:
                 if (mUser != null && mAuth != null) {
                     mAuth.signOut();
-                    startActivity(new Intent(PostListActivity.this, AddPostActivity.class));
+                    startActivity(new Intent(PostListActivity.this, MainActivity.class));
                     finish();
                 }
         }
