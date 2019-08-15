@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
                 if (mUser != null) {
                     Toast.makeText(MainActivity.this, "signed in", Toast.LENGTH_LONG).show();
                     startActivity(new Intent(MainActivity.this, PostListActivity.class));
+                    finish();
                 } else {
                     Toast.makeText(MainActivity.this, "Not signed in", Toast.LENGTH_LONG).show();
                 }
@@ -79,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Signed In", Toast.LENGTH_LONG).show();
 
                     startActivity(new Intent(MainActivity.this, PostListActivity.class));
+                    finish();
                     /*updateUI(user);*/
                 } else {
                     Toast.makeText(MainActivity.this, "Authentication failed.",
