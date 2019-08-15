@@ -23,6 +23,7 @@ import com.wolf.blogapp.Model.Blog;
 import com.wolf.blogapp.R;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class PostListActivity extends AppCompatActivity {
@@ -89,6 +90,8 @@ public class PostListActivity extends AppCompatActivity {
                 Blog blog = dataSnapshot.getValue(Blog.class);
 
                 blogList.add(blog);
+
+                Collections.reverse(blogList);
 
                 blogRecyclerAdapter = new BlogRecyclerAdapter(PostListActivity.this, blogList);
                 recyclerView.setAdapter(blogRecyclerAdapter);

@@ -5,4 +5,8 @@
     <string name="post_title">Post Title...</string>
     <string name="post_description">Post Description</string>
     <string name="post_button">Post</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email">email</string>
+    <string name="password">password</string>
 </resources>
