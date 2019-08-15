@@ -53,6 +53,8 @@ public class BlogRecyclerAdapter extends RecyclerView.Adapter<BlogRecyclerAdapte
         Picasso.get()
                 .load(imageUrl)
                 .into(holder.imageView);
+
+
     }
 
     @Override

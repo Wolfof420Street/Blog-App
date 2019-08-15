@@ -28,7 +28,7 @@ import java.util.List;
 
 public class PostListActivity extends AppCompatActivity {
 
-    private DatabaseReference mDatabaseRefrence;
+    private DatabaseReference mDatabaseReference;
     private RecyclerView recyclerView;
     private BlogRecyclerAdapter blogRecyclerAdapter;
     private List<Blog> blogList;
@@ -50,8 +50,8 @@ public class PostListActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
         mDataBase = FirebaseDatabase.getInstance();
-        mDatabaseRefrence = mDataBase.getReference().child("Blog");
-        mDatabaseRefrence.keepSynced(true);
+        mDatabaseReference = mDataBase.getReference().child("Blog");
+        mDatabaseReference.keepSynced(true);
     }
 
     @Override
@@ -84,7 +84,7 @@ public class PostListActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        mDatabaseRefrence.addChildEventListener(new ChildEventListener() {
+        mDatabaseReference.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
                 Blog blog = dataSnapshot.getValue(Blog.class);
