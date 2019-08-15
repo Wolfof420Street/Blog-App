@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
 import com.wolf.blogapp.Model.Blog;
 import com.wolf.blogapp.R;
 
@@ -49,6 +50,10 @@ public class BlogRecyclerAdapter extends RecyclerView.Adapter<BlogRecyclerAdapte
         holder.timeStamp.setText(formattedDate);
 
         imageUrl = blog.getImage();
+
+        Picasso.get()
+                .load(imageUrl)
+                .into(holder.imageView);
     }
 
     @Override
